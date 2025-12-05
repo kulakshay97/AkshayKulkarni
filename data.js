@@ -9,7 +9,11 @@ const websiteData = {
     },
     about: {
         title: "About Me",
-        bio: "I’m an Automation, Gen AI and Agentic AI enthusiast with over 6 years in the IT industry, specializing in RPA using UiPath (UiSAI, UiAAA, UiADP certified). I started with hands-on bot development and grew into roles where I lead teams, design automation architectures, and scale AI driven workflows across operations. I enjoy solving complex process challenges, working closely with business teams, and exploring emerging AI technologies that can create meaningful impact.<br><br>Outside of work, I’m passionate about finance with strong interest in stocks, mutual funds, and understanding market behavior. I enjoy reading about current affairs, global trends, and developments that shape the world. These interests keep me curious, informed, and continuously learning.",
+        bio: `I’m an Automation, Gen AI, and Agentic AI enthusiast with more than 7 years in the IT industry, specializing in RPA using UiPath(UiSAI, UiAAA, UiADP certified). My journey started with hands on bot development and gradually evolved into roles where I lead teams, design automation architectures, and scale AI driven workflows across large operations. I enjoy solving complex process challenges, collaborating closely with business stakeholders, and exploring emerging AI capabilities that can deliver measurable impact.
+
+Over the years, I have worked on building enterprise grade automations, integrating AI models with traditional RPA, and designing solutions that improve efficiency, accuracy, and user experience. I take a strong interest in creating reusable components, improving development standards, and mentoring teams so that automation programs can grow sustainably.<br><br>Outside of work, I am passionate about finance with a deep interest in understanding market behavior. I enjoy reading about current affairs, global trends, and technological shifts that influence how businesses and economies evolve. These interests keep me curious and help me stay grounded with a broader perspective on the world.
+
+I am always exploring new ideas, experimenting with tools, and learning concepts that help me stay ahead in the rapidly changing AI and automation landscape. Whether it is building agents, improving workflows, or discussing new possibilities, I enjoy being part of innovation that moves organizations forward.`,
         stats: [
             { value: "7+", label: "Years Experience" },
             { value: "10+", label: "Enterprise Clients" },
