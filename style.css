@@ -244,6 +244,7 @@ img {
     display: none;
     cursor: pointer;
     color: white;
+    z-index: 1001;
 }
 
 .bar {
@@ -253,6 +254,20 @@ img {
     background-color: white;
     height: 2px;
     margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hamburger Animation */
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 /* Hero Section */
@@ -1044,7 +1059,8 @@ footer {
         top: 70px;
         left: 0;
         width: 100%;
-        background: var(--card-bg);
+        background: rgba(15, 23, 42, 0.95);
+        /* More solid background */
         backdrop-filter: var(--backdrop-blur);
         padding: 1.5rem;
         border-radius: var(--radius);
@@ -1062,21 +1078,25 @@ footer {
         display: block;
     }
 
+    .hero {
+        padding-top: 80px;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
 
     .section-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .img-container {
-        width: 280px;
-        height: 280px;
+        width: 250px;
+        height: 250px;
     }
 
     .section {
-        padding: 3rem 0;
+        padding: 2.5rem 0;
     }
 
     .container {
@@ -1086,12 +1106,14 @@ footer {
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        /* Compact font size */
     }
 
     .hero-btns {
         flex-direction: column;
         width: 100%;
+        gap: 0.8rem;
     }
 
     .btn-primary,
@@ -1101,8 +1123,9 @@ footer {
     }
 
     .img-container {
-        width: 240px;
-        height: 240px;
+        width: 200px;
+        /* Smaller image */
+        height: 200px;
     }
 
     .timeline::after {
@@ -1120,6 +1143,12 @@ footer {
 
     .timeline-content {
         padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        /* Added shadow */
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
     }
 }
 
