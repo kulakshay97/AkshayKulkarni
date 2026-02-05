@@ -307,6 +307,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
         }
+
+        // EmailJS Form Submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = 'Sending...';
+                submitBtn.disabled = true;
+
+                // Replace these with your actual Service ID and Template ID from EmailJS
+                const serviceID = 'service_wwg5tak';
+                const templateID = 'template_235gehu';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        submitBtn.innerText = 'Message Sent!';
+                        submitBtn.style.backgroundColor = '#10b981'; // Green success color
+                        contactForm.reset();
+                        setTimeout(() => {
+                            submitBtn.innerText = originalText;
+                            submitBtn.style.backgroundColor = '';
+                            submitBtn.disabled = false;
+                        }, 3000);
+                    }, (err) => {
+                        submitBtn.innerText = 'Failed to Send';
+                        submitBtn.style.backgroundColor = '#ef4444'; // Red error color
+                        console.error('EmailJS Error:', JSON.stringify(err));
+                        alert('Failed to send message. Please try again later.');
+                        setTimeout(() => {
+                            submitBtn.innerText = originalText;
+                            submitBtn.style.backgroundColor = '';
+                            submitBtn.disabled = false;
+                        }, 3000);
+                    });
+            });
+        }
     }
 
     // Intersection Observer for Animations
