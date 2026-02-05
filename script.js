@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderAbout();
         renderSkills();
         renderProjects();
+        renderCertifications();
         renderExperience();
         renderContact();
     }
@@ -66,108 +67,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const skillsGrid = document.getElementById('skills-grid');
         if (!skillsGrid) return;
 
-        const isMobile = window.innerWidth <= 768;
+        // Reset class for grid layout
+        skillsGrid.className = 'skills-category-grid';
+        skillsGrid.innerHTML = '';
 
-        if (isMobile) {
-            skillsGrid.className = 'skills-mobile-carousel';
-            // Chunk skills into groups of 6
-            const chunkSize = 6;
-            const chunks = [];
-            for (let i = 0; i < websiteData.skills.length; i += chunkSize) {
-                chunks.push(websiteData.skills.slice(i, i + chunkSize));
-            }
+        if (websiteData.skills && Array.isArray(websiteData.skills)) {
+            const categoriesHtml = websiteData.skills.map((category, index) => {
+                const itemsHtml = category.items.map(item => `
+                    <li><i class="fa-solid fa-check"></i> ${item}</li>
+                `).join('');
 
-            let carouselHtml = `
-                <div class="skills-carousel-container">
-                    <button class="skill-nav-btn skill-prev"><i class="fa-solid fa-chevron-left"></i></button>
-                    <div class="skills-pages" id="skills-pages">
-                        ${chunks.map((chunk, pageIndex) => `
-                            <div class="skills-page ${pageIndex === 0 ? 'active' : ''}" data-index="${pageIndex}">
-                                ${chunk.map(skill => {
-                const iconHtml = skill.image
-                    ? `<img src="${skill.image}" alt="${skill.name}" style="width: 35px; height: 35px; object-fit: contain;">`
-                    : `<i class="${skill.icon}" style="color: ${skill.color || 'var(--primary-color)'}; font-size: 1.5rem;"></i>`;
                 return `
-                                        <div class="skill-card-mobile">
-                                            ${iconHtml}
-                                            <h3>${skill.name}</h3>
-                                        </div>
-                                    `;
-            }).join('')}
-                            </div>
-                        `).join('')}
-                    </div>
-                    <button class="skill-nav-btn skill-next"><i class="fa-solid fa-chevron-right"></i></button>
-                    <div class="skills-nav-dots">
-                        ${chunks.map((_, i) => `<button class="skill-dot ${i === 0 ? 'active' : ''}" data-index="${i}"></button>`).join('')}
-                    </div>
-                </div>
-            `;
-
-            skillsGrid.innerHTML = carouselHtml;
-
-            // Logic for Carousel Navigation
-            const pages = document.querySelectorAll('.skills-page');
-            const dots = document.querySelectorAll('.skill-dot');
-            const prevBtn = document.querySelector('.skill-prev');
-            const nextBtn = document.querySelector('.skill-next');
-            let currentPage = 0;
-            const totalPages = pages.length;
-
-            const updateCarousel = (index) => {
-                // Wrap around logic
-                if (index < 0) index = totalPages - 1;
-                if (index >= totalPages) index = 0;
-
-                currentPage = index;
-
-                pages.forEach(p => p.classList.remove('active'));
-                dots.forEach(d => d.classList.remove('active'));
-
-                pages[currentPage].classList.add('active');
-                dots[currentPage].classList.add('active');
-            };
-
-            prevBtn.addEventListener('click', () => updateCarousel(currentPage - 1));
-            nextBtn.addEventListener('click', () => updateCarousel(currentPage + 1));
-
-            dots.forEach(dot => {
-                dot.addEventListener('click', () => {
-                    const index = parseInt(dot.getAttribute('data-index'));
-                    updateCarousel(index);
-                });
-            });
-
-        } else {
-            // Desktop Marquee Logic
-            skillsGrid.className = 'skills-marquee';
-            const chunkSize = Math.ceil(websiteData.skills.length / 3);
-            const rows = [
-                websiteData.skills.slice(0, chunkSize),
-                websiteData.skills.slice(chunkSize, chunkSize * 2),
-                websiteData.skills.slice(chunkSize * 2)
-            ];
-
-            let allRowsHtml = '';
-            rows.forEach((rowSkills, rowIndex) => {
-                const skillsList = [...rowSkills, ...rowSkills, ...rowSkills, ...rowSkills];
-                const trackHtml = skillsList.map((skill) => {
-                    const iconHtml = skill.image
-                        ? `<img src="${skill.image}" alt="${skill.name}" style="width: 40px; height: 40px; object-fit: contain; margin-bottom: 0.5rem;">`
-                        : `<i class="${skill.icon}" style="color: ${skill.color || 'var(--primary-color)'}; font-size: 2rem; margin-bottom: 0.5rem;"></i>`;
-
-                    return `
-                    <div class="skill-card" style="--skill-color: ${skill.color || 'var(--primary-color)'}">
-                        ${iconHtml}
-                        <h3>${skill.name}</h3>
+                    <div class="skill-category-card fade-in-up" style="animation-delay: ${0.2 + (index * 0.1)}s; --category-color: ${category.color || 'var(--theme-color)'}">
+                        <h3><i class="${category.icon}" style="color: var(--category-color); margin-right: 10px;"></i>${category.category}</h3>
+                        <ul>
+                            ${itemsHtml}
+                        </ul>
                     </div>
                 `;
-                }).join('');
+            }).join('');
 
-                const duration = 30 + (rowIndex * 5);
-                allRowsHtml += `<div class="skills-track" style="animation-duration: ${duration}s">${trackHtml}</div>`;
-            });
-            skillsGrid.innerHTML = allRowsHtml;
+            skillsGrid.innerHTML = categoriesHtml;
         }
     }
 
@@ -339,6 +259,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById(`${tabId}-tab`).classList.add('active');
             });
         });
+    }
+
+    function renderCertifications() {
+        const certGrid = document.getElementById('certifications-grid');
+        if (!certGrid || !websiteData.certifications) return;
+
+        certGrid.innerHTML = websiteData.certifications.items.map((cert, index) => `
+            <div class="certification-card fade-in-up" style="animation-delay: ${0.2 + (index * 0.1)}s; --cert-color: ${cert.color || 'var(--primary-color)'}">
+                <div class="cert-icon">
+                    <i class="${cert.icon}" style="color: var(--cert-color)"></i>
+                </div>
+                <div class="cert-info">
+                    <h3>${cert.name}</h3>
+                    <p>${cert.issuer}</p>
+                </div>
+            </div>
+        `).join('');
     }
 
     function renderContact() {

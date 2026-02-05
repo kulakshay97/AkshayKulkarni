@@ -21,22 +21,56 @@ I am always exploring new ideas, experimenting with tools, and learning concepts
         ]
     },
     skills: [
-        { name: "RPA (UiPath)", icon: "fa-solid fa-robot", color: "#FA4616" },
-        { name: "Generative AI", icon: "fa-solid fa-brain", color: "#4285F4" },
-        { name: "Agentic AI", icon: "fa-solid fa-network-wired", color: "#9C27B0" },
-        { name: "Machine Learning", icon: "fa-solid fa-cogs", color: "#F4B400" },
-        { name: "Data Science", icon: "fa-solid fa-chart-line", color: "#0F9D58" },
-        { name: "Python", icon: "fa-brands fa-python", color: "#3776AB" },
-        { name: "Conversational AI", icon: "fa-solid fa-comments", color: "#009688" },
-        { name: "RAG", icon: "fa-solid fa-book-open", color: "#FF5722" },
-        { name: "NLP", icon: "fa-solid fa-language", color: "#673AB7" },
-        { name: "OCR", icon: "fa-solid fa-eye", color: "#795548" },
-        { name: "n8n", icon: "fa-solid fa-bolt", color: "#EA4B71" },
-        { name: "Prompt Engineering", icon: "fa-solid fa-terminal", color: "#607D8B" },
-        { name: "Project Management", icon: "fa-solid fa-list-check", color: "#2196F3" },
-        { name: "Leadership", icon: "fa-solid fa-users", color: "#E91E63" }
+        {
+            category: "Agentic AI, GenAI & LLMs",
+            icon: "fa-solid fa-brain",
+            color: "#d946ef", // Fuchsia 500
+            items: [
+                "Agent Builders & Workflow Automation tools: UiPath Maestro, UiPath Agent Builder, n8n",
+                "Agent frameworks: LangChain, LangGraph, CrewAI",
+                "Generative AI integration using LLMs",
+                "Prompt engineering, tool calling, Retrieval Augmented Generation (RAG)",
+                "Multi agent communication protocols: MCP, ACP, A2A",
+                "Data Science, Machine Learning, NLP, Conversational AI"
+            ]
+        },
+        {
+            category: "Automation & RPA",
+            icon: "fa-solid fa-robot",
+            color: "#f97316", // Orange 500
+            items: [
+                "UiPath Platform: Studio, Orchestrator, Action Center, Insights",
+                "Document Understanding, OCR, REFramework",
+                "Queue based processing, exception handling, workflow optimization, performance tuning",
+                "Power Automate"
+            ]
+        },
+        {
+            category: "Programming & Scripting",
+            icon: "fa-solid fa-code",
+            color: "#3b82f6", // Blue 500
+            items: [
+                "Python, VB.NET, PowerShell",
+                "REST API consumption and integration, webhook handling"
+            ]
+        },
+        {
+            category: "Enterprise Systems & Integrations",
+            icon: "fa-solid fa-network-wired",
+            color: "#10b981", // Emerald 500
+            items: [
+                "Salesforce, VAST and Jira integrations",
+                "API driven integrations, third party system connectivity"
+            ]
+        }
     ],
     projects: [
+        {
+            title: "Autonomous Multi-Agent Healthcare Ecosystem (with ACP & MCP)",
+            description: "Designed and implemented a scalable, distributed multi-agent system to automate healthcare and insurance workflows. Orchestrated specialized agents using CrewAI (for RAG-based policy analysis) and Smolagents (for live web-search medical assistance).Utilized Microservice Agent Architecture, Agent Communication Protocol (ACP) to wrap agents into independent servers, decoupling logic from deployment and enabling seamless agent discovery, Built a Hierarchical Router Agent to autonomously classify user queries and dispatch them to the appropriate specialist agent (Sequential vs. Parallel execution).Integrated Model Context Protocol (MCP) to expose local proprietary data (Doctor Directory) to LLMs securely, bridging the gap between static datasets and active agent tools.",
+            tags: ["Python", "CrewAI", "Smolagents", "ACP-SDK", "FastMCP", "OpenAI GPT-4", "Agentic AI"],
+            image: "assets/projects/healthcare_agent.png"
+        },
         {
             title: "Gen AI Enhanced Automation Architecture",
             description: "Architected scalable automation solutions combining traditional RPA with Gen AI to enable smarter decision making, contextual exception handling, and improved user experience across enterprise processes. Designed end to end workflows that used AI models for intent detection, content interpretation, and dynamic routing. Introduced reusable design patterns that simplified integration of AI services into existing automation frameworks.These solutions helped business teams handle complex scenarios with greater accuracy and delivered a more intuitive interaction journey for end users.",
@@ -164,6 +198,23 @@ I am always exploring new ideas, experimenting with tools, and learning concepts
         socials: [
             { icon: "fa-brands fa-linkedin", link: "https://www.linkedin.com/in/akshay616" },
             { icon: "fa-solid fa-envelope", link: "mailto:akshaykulkarni616@gmail.com" }
+        ]
+    },
+    certifications: {
+        title: "Certifications",
+        items: [
+            { name: "UiPath Automation Developer Professional", issuer: "UiPath", icon: "fa-solid fa-robot", color: "#FA4616" },
+            { name: "UiPath Agentic Automation Associate", issuer: "UiPath", icon: "fa-solid fa-robot", color: "#FA4616" },
+            { name: "UiPath Specialized AI Professional", issuer: "UiPath", icon: "fa-solid fa-brain", color: "#FA4616" },
+            { name: "Generative AI Fundamentals", issuer: "Google Cloud", icon: "fa-brands fa-google", color: "#4285F4" },
+            { name: "Build Real World AI Applications with Gemini and Imagen", issuer: "Google Cloud", icon: "fa-solid fa-cloud", color: "#34A853" },
+            { name: "Machine Learning with Python", issuer: "IBM", icon: "fa-solid fa-brain", color: "#054ADA" },
+            { name: "Python for Data Science & AI", issuer: "IBM", icon: "fa-brands fa-python", color: "#3776AB" },
+            { name: "AI for Everyone", issuer: "DeepLearning.AI", icon: "fa-solid fa-graduation-cap", color: "#FFCA28" },
+            { name: "Generative AI for Everyone", issuer: "DeepLearning.AI", icon: "fa-solid fa-chalkboard-user", color: "#FFCA28" },
+            { name: "Agentic AI", issuer: "DeepLearning.AI", icon: "fa-solid fa-network-wired", color: "#FFCA28" },
+            { name: "Evaluating AI Agents", issuer: "DeepLearning.AI", icon: "fa-solid fa-magnifying-glass-chart", color: "#FFCA28" },
+            { name: "Safe and Reliable AI via Guardrails", issuer: "DeepLearning.AI", icon: "fa-solid fa-shield-halved", color: "#FFCA28" }
         ]
     }
 };
