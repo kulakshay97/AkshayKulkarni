@@ -27,9 +27,9 @@ I am always exploring new ideas, experimenting with tools, and learning concepts
             color: "#d946ef", // Fuchsia 500
             items: [
                 "Agent Builders & Workflow Automation tools: UiPath Maestro, UiPath Agent Builder, n8n",
-                "Agent frameworks: LangChain, LangGraph, CrewAI",
+                "Agent frameworks: LangChain, LangGraph, Autogen, LlamaIndex, CrewAI",
                 "Generative AI integration using LLMs",
-                "Prompt engineering, tool calling, Retrieval Augmented Generation (RAG)",
+                "Prompt engineering, Retrieval Augmented Generation (RAG), Agentic RAG, Pydantic",
                 "Multi agent communication protocols: MCP, ACP, A2A",
                 "Data Science, Machine Learning, NLP, Conversational AI"
             ]
