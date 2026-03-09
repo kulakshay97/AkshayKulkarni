@@ -9,9 +9,11 @@ const websiteData = {
     },
     about: {
         title: "About Me",
-        bio: `I’m an Automation, Gen AI, and Agentic AI enthusiast with more than 7 years in the IT industry, specializing in RPA using UiPath(UiSAI, UiAAA, UiADP certified). My journey started with hands on bot development and gradually evolved into roles where I lead teams, design automation architectures, and scale AI driven workflows across large operations. I enjoy solving complex process challenges, collaborating closely with business stakeholders, and exploring emerging AI capabilities that can deliver measurable impact.
+        bio: `I’m an AI & Automation Lead with over 7 years of experience building enterprise automation and intelligent systems, with the last two years focused on Agentic AI and generative AI solutions. My journey began with hands on RPA development using UiPath and gradually evolved into leading teams, architecting automation platforms, and designing AI driven workflows that operate at enterprise scale.
 
-Over the years, I have worked on building enterprise grade automations, integrating AI models with traditional RPA, and designing solutions that improve efficiency, accuracy, and user experience. I take a strong interest in creating reusable components, improving development standards, and mentoring teams so that automation programs can grow sustainably.<br><br>Outside of work, I am passionate about finance with a deep interest in understanding market behavior. I enjoy reading about current affairs, global trends, and technological shifts that influence how businesses and economies evolve. These interests keep me curious and help me stay grounded with a broader perspective on the world.
+Over the years, I have worked on building scalable automation solutions, integrating AI capabilities with enterprise systems, and delivering intelligent workflows that improve operational efficiency and reduce manual effort. I enjoy solving complex business problems through practical AI applications and collaborating closely with stakeholders to turn automation opportunities into measurable business outcomes.
+
+<br><br>Outside of work, I am passionate about finance with a deep interest in understanding market behavior. I enjoy reading about current affairs, global trends, and technological shifts that influence how businesses and economies evolve. These interests keep me curious and help me stay grounded with a broader perspective on the world.
 
 I am always exploring new ideas, experimenting with tools, and learning concepts that help me stay ahead in the rapidly changing AI and automation landscape. Whether it is building agents, improving workflows, or discussing new possibilities, I enjoy being part of innovation that moves organizations forward.`,
         stats: [
@@ -22,16 +24,14 @@ I am always exploring new ideas, experimenting with tools, and learning concepts
     },
     skills: [
         {
-            category: "Agentic AI, GenAI & LLMs",
+            category: "Agentic AI & Generative AI",
             icon: "fa-solid fa-brain",
             color: "#d946ef", // Fuchsia 500
             items: [
-                "Agent Builders & Workflow Automation tools: UiPath Maestro, UiPath Agent Builder, n8n",
-                "Agent frameworks: LangChain, LangGraph, Autogen, LlamaIndex, CrewAI",
-                "Generative AI integration using LLMs",
-                "Prompt engineering, Retrieval Augmented Generation (RAG), Agentic RAG, Pydantic",
-                "Multi agent communication protocols: MCP, ACP, A2A",
-                "Data Science, Machine Learning, NLP, Conversational AI"
+                "Multi-Agent Architecture, Agent Orchestration, Human-in-the-Loop Design, LLM Integration (Google-ADK, LangChain, LangGraph, CrewAI)",
+                "Workflow Automation & Orchestration, Intelligent Process Automation (UiPath Maestro, UiPath Agent Builder, n8n)",
+                "Multi-Agent Protocols, Context Passing, Tool Chaining (MCP, ACP, A2A)",
+                "Conversational AI, Prompt engineering, Retrieval Augmented Generation (RAG), Agentic RAG, Structured Output Design"
             ]
         },
         {
@@ -39,10 +39,10 @@ I am always exploring new ideas, experimenting with tools, and learning concepts
             icon: "fa-solid fa-robot",
             color: "#f97316", // Orange 500
             items: [
-                "UiPath Platform: Studio, Orchestrator, Action Center, Insights",
-                "Document Understanding, OCR, REFramework",
-                "Queue based processing, exception handling, workflow optimization, performance tuning",
-                "Power Automate"
+                "UiPath Platform: Studio, Orchestrator, AI Center, Action Center, Insights, UiPath SDK",
+                "Intelligent Document Processing: Document Understanding, OCR-based Extraction, CV Automation",
+                "Enterprise Automation Design: Queue-based Processing using RE-Framework, Exception Handling, Workflow Optimization, Performance Tuning, Scalable Bot Architecture",
+                "Additional Automation Tools: Power Automate"
             ]
         },
         {
@@ -50,17 +50,8 @@ I am always exploring new ideas, experimenting with tools, and learning concepts
             icon: "fa-solid fa-code",
             color: "#3b82f6", // Blue 500
             items: [
-                "Python, VB.NET, PowerShell",
-                "REST API consumption and integration, webhook handling"
-            ]
-        },
-        {
-            category: "Enterprise Systems & Integrations",
-            icon: "fa-solid fa-network-wired",
-            color: "#10b981", // Emerald 500
-            items: [
-                "Salesforce, VAST and Jira integrations",
-                "API driven integrations, third party system connectivity"
+                "Core Languages: Python, VB.NET, PowerShell",
+                "API & Integration Development: REST API Design & Integration, Webhook Handling, Event-driven Architecture"
             ]
         }
     ],
@@ -131,47 +122,35 @@ I am always exploring new ideas, experimenting with tools, and learning concepts
     ],
     experience: [
         {
-            date: "April 2024 - Present",
-            role: "Automation Technical Lead",
-            company: "Accelirate Inc.",
+            date: "04/2023 – Present",
+            role: "Technical Lead",
+            company: "Accelirate Softech Pvt Ltd",
             description: `<ul>
-                <li>Leading strategy and scaling automation.</li>
-                <li>Architecting Agentic AI pipelines and shaping how Gen AI augments enterprise processes.</li>
-                <li>Driving end to end solution design across RPA, AI, and integration platforms, ensuring automation initiatives align with business goals and enterprise architecture standards.</li>
-                <li>Mentoring developers and guiding teams on best practices, reusable frameworks, and scalable design principles to accelerate delivery across multiple workstreams.</li>
-                <li>Partnering with clients to identify automation opportunities, evaluate feasibility, and define transformation roadmaps that maximize ROI.</li>
+                <li>Led the strategy, architecture, and delivery of 10+ enterprise-scale Agentic AI and automation solutions using UiPath and LLM-based frameworks, enabling autonomous workflows and intelligent decision-making across business functions.</li>
+                <li>Designed and deployed multi-agent AI systems leveraging LLMs, orchestration frameworks, and UiPath platform capabilities, reducing end-to-end process cycle times by up to 60% with human-in-the-loop governance and continuous learning pipelines.</li>
+                <li>Led and mentored a cross-functional team of 6+ developers and business analysts, establishing solution standards, code review practices, and structured knowledge-sharing programs that reduced onboarding time by 30%.</li>
+                <li>Owned the automation and AI roadmap by driving process discovery, pipeline prioritization, technology evaluation, and stakeholder engagement, contributing to 60% reduction in manual operational effort across delivered solutions.</li>
             </ul>`
         },
         {
-            date: "Feb 2021 - March 2024",
-            role: "Sr. RPA Developer",
-            company: "Accelirate Inc.",
+            date: "02/2021 – 03/2023",
+            role: "Sr. Automation Engineer",
+            company: "Accelirate Softech Pvt Ltd",
             description: `<ul>
-                <li>Built end to end automations using UiPath, focusing on reliability, modularity, and long term maintainability.</li>
-                <li>Integrated AI and ML models for classification, prediction, and document understanding to improve decision quality within workflows.</li>
-                <li>Developed reusable components, orchestrations, and framework level utilities that accelerated delivery across multiple client projects.</li>
-                <li>Implemented API integrations, data validations, and exception handling patterns to strengthen workflow accuracy and resiliency.</li>
+                <li>Built 8+ automation solutions using advanced UiPath capabilities including Document Understanding and AI Center, enabling accurate processing of unstructured documents at scale and reducing manual document handling by 50%.</li>
+                <li>Applied foundational ML and AI concepts to real-world automation use cases, bridging the gap between data science outputs and production-grade RPA workflows across 3+ client engagements.</li>
+                <li>Automated complex end-to-end workflows integrating Oracle/MySQL databases, web applications, Python-based ML models, Excel, email, and OCR-based PDF processing with saving 200+ hours of manual effort monthly.</li>
+                <li>Maintained full technical ownership of project delivery across 5+ projects, ensuring solutions adhered to RPA best practices across development, testing, and production deployment.</li>
             </ul>`
         },
         {
-            date: "Jan 2019 - Feb 2021",
-            role: "RPA Developer",
+            date: "08/2018 – 01/2021",
+            role: "Software Engineer",
             company: "Capgemini",
             description: `<ul>
-                <li>Built automation workflows using UiPath for high volume, rules based business processes and ensured smooth handover into production.</li>
-                <li>Implemented strong exception handling, logging, and audit controls to maintain reliability and meet enterprise data privacy expectations.</li>
-                <li>Conducted unit testing, integrated testing, and production validation to ensure stable and consistent bot performance.</li>
-                <li>Provided hypercare support and optimization recommendations to improve speed, accuracy, and long term maintainability.</li>
-            </ul>`
-        },
-        {
-            date: "Sept 2018 - Dec 2018",
-            role: "Full-stack Developer",
-            company: "Capgemini",
-            description: `<ul>
-                <li>Worked on web application development using front end and back end technologies, contributing to feature design, coding, testing, and deployment activities.</li>
-                <li>Assisted in debugging, performance tuning, and release management to maintain stable and scalable applications.</li>
-                <li>Gained foundational experience in software engineering that later supported a smooth transition into automation and AI driven workflows.</li>
+                <li>Contributed to the full project lifecycle across 10+ automation projects from requirements gathering, development, testing, UAT, and production deployment to ensure on-time, quality delivery.</li>
+                <li>Built UiPath automations combining API integration and desktop automation, improving process efficiency by 45% and reducing manual intervention across business operations.</li>
+                <li>Worked extensively with RE-Framework, enabling robust exception handling, queue configuration, and transactional processing for workflows handling 500+ transactions per day.</li>
             </ul>`
         }
     ],
